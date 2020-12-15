@@ -1,0 +1,6 @@
+framework module Pods_WalkingApp_WalkingAppUITests {
+  umbrella header "Pods-WalkingApp-WalkingAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
