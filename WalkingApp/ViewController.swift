@@ -14,6 +14,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func SignUpMainMenu(_ sender: Any) {
+        performSegue(withIdentifier: "SignUpSegue", sender: self)
+    }
+    
+    @IBAction func LoginMainMenu(_ sender: Any) {
+        performSegue(withIdentifier: "LoginSegue", sender: self)
+    }
+    
+    
+    
 }
 

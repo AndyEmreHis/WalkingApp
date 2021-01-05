@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,12 @@
 		9749C97A2588AE7600264D6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9749C9782588AE7600264D6B /* LaunchScreen.storyboard */; };
 		9749C9852588AE7600264D6B /* WalkingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749C9842588AE7600264D6B /* WalkingAppTests.swift */; };
 		9749C9902588AE7600264D6B /* WalkingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749C98F2588AE7600264D6B /* WalkingAppUITests.swift */; };
+		9749C9B62591E1CF00264D6B /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749C9B52591E1CF00264D6B /* SignUpViewController.swift */; };
+		9749C9BB2591E23600264D6B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749C9BA2591E23600264D6B /* LoginViewController.swift */; };
+		9749C9C0259B177F00264D6B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749C9BF259B177F00264D6B /* Utilities.swift */; };
+		9749C9DE259BC4D300264D6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749C9DD259BC4D300264D6B /* Constants.swift */; };
+		9749C9E3259BC67300264D6B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749C9E2259BC67300264D6B /* HomeViewController.swift */; };
+		9749CA2725A45D5F00264D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9749CA2625A45D5F00264D6B /* GoogleService-Info.plist */; };
 		A3A123B3E3E41C034F2609DA /* Pods_WalkingApp_WalkingAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B998D0AC005F26BAE19D730 /* Pods_WalkingApp_WalkingAppUITests.framework */; };
 		BB58715BAB03262FFC2C43C7 /* Pods_WalkingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F924E0C3B4625DE55DEEC2 /* Pods_WalkingAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -55,6 +61,12 @@
 		9749C98B2588AE7600264D6B /* WalkingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalkingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9749C98F2588AE7600264D6B /* WalkingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalkingAppUITests.swift; sourceTree = "<group>"; };
 		9749C9912588AE7600264D6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9749C9B52591E1CF00264D6B /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9749C9BA2591E23600264D6B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9749C9BF259B177F00264D6B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		9749C9DD259BC4D300264D6B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9749C9E2259BC67300264D6B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9749CA2625A45D5F00264D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3BF62F7C4D8101BFD8AA4A0 /* Pods-WalkingApp-WalkingAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkingApp-WalkingAppUITests.release.xcconfig"; path = "Target Support Files/Pods-WalkingApp-WalkingAppUITests/Pods-WalkingApp-WalkingAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D4D923EFE6B551EBA8B0D859 /* Pods-WalkingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkingAppTests.release.xcconfig"; path = "Target Support Files/Pods-WalkingAppTests/Pods-WalkingAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		D50B90A1FE11EE01A90C6C8A /* Pods-WalkingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkingAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WalkingAppTests/Pods-WalkingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +113,6 @@
 				D50B90A1FE11EE01A90C6C8A /* Pods-WalkingAppTests.debug.xcconfig */,
 				D4D923EFE6B551EBA8B0D859 /* Pods-WalkingAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -134,9 +145,15 @@
 				9749C96F2588AE7500264D6B /* SceneDelegate.swift */,
 				9749C9712588AE7500264D6B /* ViewController.swift */,
 				9749C9732588AE7500264D6B /* Main.storyboard */,
+				9749C9BA2591E23600264D6B /* LoginViewController.swift */,
 				9749C9762588AE7600264D6B /* Assets.xcassets */,
 				9749C9782588AE7600264D6B /* LaunchScreen.storyboard */,
 				9749C97B2588AE7600264D6B /* Info.plist */,
+				9749C9B52591E1CF00264D6B /* SignUpViewController.swift */,
+				9749C9BF259B177F00264D6B /* Utilities.swift */,
+				9749CA2625A45D5F00264D6B /* GoogleService-Info.plist */,
+				9749C9DD259BC4D300264D6B /* Constants.swift */,
+				9749C9E2259BC67300264D6B /* HomeViewController.swift */,
 			);
 			path = WalkingApp;
 			sourceTree = "<group>";
@@ -278,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9749C97A2588AE7600264D6B /* LaunchScreen.storyboard in Resources */,
+				9749CA2725A45D5F00264D6B /* GoogleService-Info.plist in Resources */,
 				9749C9772588AE7600264D6B /* Assets.xcassets in Resources */,
 				9749C9752588AE7500264D6B /* Main.storyboard in Resources */,
 			);
@@ -407,8 +425,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9749C9C0259B177F00264D6B /* Utilities.swift in Sources */,
 				9749C9722588AE7500264D6B /* ViewController.swift in Sources */,
 				9749C96E2588AE7500264D6B /* AppDelegate.swift in Sources */,
+				9749C9E3259BC67300264D6B /* HomeViewController.swift in Sources */,
+				9749C9B62591E1CF00264D6B /* SignUpViewController.swift in Sources */,
+				9749C9DE259BC4D300264D6B /* Constants.swift in Sources */,
+				9749C9BB2591E23600264D6B /* LoginViewController.swift in Sources */,
 				9749C9702588AE7500264D6B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -593,7 +616,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AndyKCode.WalkingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AndyKCode.WalkingApp19Mayis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -613,7 +636,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = AndyKCode.WalkingApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AndyKCode.WalkingApp19Mayis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -11,6 +11,8 @@ target 'WalkingApp' do
   pod 'Firebase/Core'
   pod 'Firebase'
   pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 
   target 'WalkingAppTests' do
     inherit! :search_paths
