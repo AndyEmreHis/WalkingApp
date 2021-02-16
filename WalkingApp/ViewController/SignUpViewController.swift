@@ -10,6 +10,10 @@ import FirebaseAuth
 import Firebase
 
 class SignUpViewController: UIViewController {
+    
+    weak var delegate: EmailDelegate?
+    
+    let db = Firestore.firestore()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,9 +57,9 @@ class SignUpViewController: UIViewController {
         
     }
     
-    func transtitionToHome(){
+    func transtitionToHome(emailName: String){
         let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        
+        homeViewController?.emailName = emailName
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
     }
@@ -82,9 +86,8 @@ class SignUpViewController: UIViewController {
                 }
                 
                 else{
-                    let db = Firestore.firestore()
                     
-                    db.collection("users").addDocument(data: ["name": username, "email": email, "password": password, "uid": result!.user.uid]) { (error) in
+                    self.db.collection("users").document(email).setData(["name": username, "email": email, "password": password, "uid": result!.user.uid, "currentLat": 41.28, "currentLon": 28.9, "steps": 0]) { (error) in
                         
                         if error != nil{
                             self.ErrorLabel.text = "Error saving user data."
@@ -93,24 +96,30 @@ class SignUpViewController: UIViewController {
                         
                     }
                     
-                    self.transtitionToHome()
+                    print("LOLOLOLOLOLOLOLOLOLOL")
+                    
+                    let docRef = self.db.collection("users").document(email)
+
+                    docRef.getDocument { (document, error) in
+                        if let document = document, document.exists {
+                            let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                            print("Document data: \(dataDescription)")
+                     }
+                }
+                            
+                    //self.completionHandler?(email)
+                    //self.delegate?.EmailChosen(email)// Eror is here
+                    
+                    self.transtitionToHome(emailName: email)
                     
                 }
             }
+            
         }
         
     }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
+    
+
+

@@ -9,6 +9,7 @@ import UIKit
 import FirebaseAuth
 class LoginViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,9 +26,9 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var errorLabel: UILabel!
     
-    func transtitionToHome(){
+    func transtitionToHome(emailName: String){
         let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
-        
+        homeViewController?.emailName = emailName
         view.window?.rootViewController = homeViewController
         view.window?.makeKeyAndVisible()
     }
@@ -46,7 +47,7 @@ class LoginViewController: UIViewController {
                     }
                     else {
                         
-                        self.transtitionToHome()
+                        self.transtitionToHome(emailName: email)
                         
                     }
         

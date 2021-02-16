@@ -13,6 +13,8 @@ target 'WalkingApp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
+  pod 'GoogleMaps', '4.1.0'
+  pod 'GooglePlaces', '4.1.0'
 
   target 'WalkingAppTests' do
     inherit! :search_paths

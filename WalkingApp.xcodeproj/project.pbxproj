@@ -21,7 +21,10 @@
 		9749C9C0259B177F00264D6B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749C9BF259B177F00264D6B /* Utilities.swift */; };
 		9749C9DE259BC4D300264D6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749C9DD259BC4D300264D6B /* Constants.swift */; };
 		9749C9E3259BC67300264D6B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9749C9E2259BC67300264D6B /* HomeViewController.swift */; };
-		9749CA2725A45D5F00264D6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9749CA2625A45D5F00264D6B /* GoogleService-Info.plist */; };
+		97F04F7E25C49EE100DA08C3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 97F04F7D25C49EE100DA08C3 /* GoogleService-Info.plist */; };
+		97F04F9F25C765AF00DA08C3 /* HomeMapChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F04F9E25C765AF00DA08C3 /* HomeMapChildViewController.swift */; };
+		97F04FA425CB60FB00DA08C3 /* NameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F04FA325CB60FB00DA08C3 /* NameDelegate.swift */; };
+		97F04FA925D4850900DA08C3 /* Polyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F04FA825D4850900DA08C3 /* Polyline.swift */; };
 		A3A123B3E3E41C034F2609DA /* Pods_WalkingApp_WalkingAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B998D0AC005F26BAE19D730 /* Pods_WalkingApp_WalkingAppUITests.framework */; };
 		BB58715BAB03262FFC2C43C7 /* Pods_WalkingAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F924E0C3B4625DE55DEEC2 /* Pods_WalkingAppTests.framework */; };
 /* End PBXBuildFile section */
@@ -66,7 +69,10 @@
 		9749C9BF259B177F00264D6B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		9749C9DD259BC4D300264D6B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9749C9E2259BC67300264D6B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		9749CA2625A45D5F00264D6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		97F04F7D25C49EE100DA08C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		97F04F9E25C765AF00DA08C3 /* HomeMapChildViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMapChildViewController.swift; sourceTree = "<group>"; };
+		97F04FA325CB60FB00DA08C3 /* NameDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameDelegate.swift; sourceTree = "<group>"; };
+		97F04FA825D4850900DA08C3 /* Polyline.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Polyline.swift; sourceTree = "<group>"; };
 		A3BF62F7C4D8101BFD8AA4A0 /* Pods-WalkingApp-WalkingAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkingApp-WalkingAppUITests.release.xcconfig"; path = "Target Support Files/Pods-WalkingApp-WalkingAppUITests/Pods-WalkingApp-WalkingAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D4D923EFE6B551EBA8B0D859 /* Pods-WalkingAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkingAppTests.release.xcconfig"; path = "Target Support Files/Pods-WalkingAppTests/Pods-WalkingAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		D50B90A1FE11EE01A90C6C8A /* Pods-WalkingAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkingAppTests.debug.xcconfig"; path = "Target Support Files/Pods-WalkingAppTests/Pods-WalkingAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -141,19 +147,14 @@
 		9749C96C2588AE7500264D6B /* WalkingApp */ = {
 			isa = PBXGroup;
 			children = (
+				9749CA3125A5AFB400264D6B /* Storyboards */,
+				9749CA3025A5AF8400264D6B /* Utility */,
+				9749CA2B25A5AF2C00264D6B /* ViewController */,
 				9749C96D2588AE7500264D6B /* AppDelegate.swift */,
 				9749C96F2588AE7500264D6B /* SceneDelegate.swift */,
-				9749C9712588AE7500264D6B /* ViewController.swift */,
-				9749C9732588AE7500264D6B /* Main.storyboard */,
-				9749C9BA2591E23600264D6B /* LoginViewController.swift */,
 				9749C9762588AE7600264D6B /* Assets.xcassets */,
-				9749C9782588AE7600264D6B /* LaunchScreen.storyboard */,
 				9749C97B2588AE7600264D6B /* Info.plist */,
-				9749C9B52591E1CF00264D6B /* SignUpViewController.swift */,
-				9749C9BF259B177F00264D6B /* Utilities.swift */,
-				9749CA2625A45D5F00264D6B /* GoogleService-Info.plist */,
-				9749C9DD259BC4D300264D6B /* Constants.swift */,
-				9749C9E2259BC67300264D6B /* HomeViewController.swift */,
+				97F04F7D25C49EE100DA08C3 /* GoogleService-Info.plist */,
 			);
 			path = WalkingApp;
 			sourceTree = "<group>";
@@ -174,6 +175,38 @@
 				9749C9912588AE7600264D6B /* Info.plist */,
 			);
 			path = WalkingAppUITests;
+			sourceTree = "<group>";
+		};
+		9749CA2B25A5AF2C00264D6B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9749C9712588AE7500264D6B /* ViewController.swift */,
+				9749C9BA2591E23600264D6B /* LoginViewController.swift */,
+				9749C9B52591E1CF00264D6B /* SignUpViewController.swift */,
+				9749C9E2259BC67300264D6B /* HomeViewController.swift */,
+				97F04F9E25C765AF00DA08C3 /* HomeMapChildViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		9749CA3025A5AF8400264D6B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9749C9BF259B177F00264D6B /* Utilities.swift */,
+				9749C9DD259BC4D300264D6B /* Constants.swift */,
+				97F04FA325CB60FB00DA08C3 /* NameDelegate.swift */,
+				97F04FA825D4850900DA08C3 /* Polyline.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		9749CA3125A5AFB400264D6B /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				9749C9732588AE7500264D6B /* Main.storyboard */,
+				9749C9782588AE7600264D6B /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		F44D9AA11EA45F03AAA1BF6F /* Frameworks */ = {
@@ -198,6 +231,7 @@
 				9749C9672588AE7500264D6B /* Frameworks */,
 				9749C9682588AE7500264D6B /* Resources */,
 				E4BBFE12F139E60CBAF8FF6D /* [CP] Embed Pods Frameworks */,
+				B4D68CE44A41E67827577DAD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +270,7 @@
 				9749C9882588AE7600264D6B /* Frameworks */,
 				9749C9892588AE7600264D6B /* Resources */,
 				B19EE936C94865D2ABEE249A /* [CP] Embed Pods Frameworks */,
+				7EEE63BEEC149B1E7611FC4D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -295,7 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9749C97A2588AE7600264D6B /* LaunchScreen.storyboard in Resources */,
-				9749CA2725A45D5F00264D6B /* GoogleService-Info.plist in Resources */,
+				97F04F7E25C49EE100DA08C3 /* GoogleService-Info.plist in Resources */,
 				9749C9772588AE7600264D6B /* Assets.xcassets in Resources */,
 				9749C9752588AE7500264D6B /* Main.storyboard in Resources */,
 			);
@@ -384,6 +419,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		7EEE63BEEC149B1E7611FC4D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkingApp-WalkingAppUITests/Pods-WalkingApp-WalkingAppUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkingApp-WalkingAppUITests/Pods-WalkingApp-WalkingAppUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WalkingApp-WalkingAppUITests/Pods-WalkingApp-WalkingAppUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B19EE936C94865D2ABEE249A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -399,6 +451,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WalkingApp-WalkingAppUITests/Pods-WalkingApp-WalkingAppUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4D68CE44A41E67827577DAD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkingApp/Pods-WalkingApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WalkingApp/Pods-WalkingApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WalkingApp/Pods-WalkingApp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E4BBFE12F139E60CBAF8FF6D /* [CP] Embed Pods Frameworks */ = {
@@ -425,8 +494,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				97F04F9F25C765AF00DA08C3 /* HomeMapChildViewController.swift in Sources */,
 				9749C9C0259B177F00264D6B /* Utilities.swift in Sources */,
+				97F04FA925D4850900DA08C3 /* Polyline.swift in Sources */,
 				9749C9722588AE7500264D6B /* ViewController.swift in Sources */,
+				97F04FA425CB60FB00DA08C3 /* NameDelegate.swift in Sources */,
 				9749C96E2588AE7500264D6B /* AppDelegate.swift in Sources */,
 				9749C9E3259BC67300264D6B /* HomeViewController.swift in Sources */,
 				9749C9B62591E1CF00264D6B /* SignUpViewController.swift in Sources */,

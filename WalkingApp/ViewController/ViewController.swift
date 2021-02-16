@@ -22,6 +22,11 @@ class ViewController: UIViewController {
         performSegue(withIdentifier: "LoginSegue", sender: self)
     }
     
+    @IBAction func SecretMainMenu(_ sender: Any) {
+        performSegue(withIdentifier: "SecretSegue", sender: self)
+    }
+    
+    
     
     
 }
