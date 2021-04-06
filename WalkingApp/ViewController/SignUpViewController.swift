@@ -87,7 +87,7 @@ class SignUpViewController: UIViewController {
                 
                 else{
                     
-                    self.db.collection("users").document(email).setData(["name": username, "email": email, "password": password, "uid": result!.user.uid, "currentLat": 41.28, "currentLon": 28.9, "steps": 0]) { (error) in
+                    self.db.collection("users").document(email).setData(["name": username, "email": email, "password": password, "uid": result!.user.uid, "currentLat": 41.28, "currentLon": 28.9, "steps": 0, "targetLat": 41.28, "targetLon": 36.3, "distToTarget": 740, "distTravelled": 0]) { (error) in
                         
                         if error != nil{
                             self.ErrorLabel.text = "Error saving user data."

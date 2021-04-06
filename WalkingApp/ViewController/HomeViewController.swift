@@ -28,6 +28,10 @@ class HomeViewController: UIViewController{
 
     var userLon = 28.9
     
+    var userTargetLat = 41.8
+    
+    var userTargetLon = 36.3
+    
     let db = Firestore.firestore()
     
     var distance = 0.0
@@ -62,26 +66,36 @@ class HomeViewController: UIViewController{
                         self.stepProperty = document.get("steps") as! Int
                         print(self.stepProperty)
                         self.StepCountLabel.text = "Number Of Steps: " + String(self.stepProperty)
+                        self.userLat = document.get("currentLat") as! Double
+                        self.userLon = document.get("currentLon") as! Double
+                        self.userTargetLat = document.get("targetLat") as! Double
+                        self.userTargetLon = document.get("targetLon") as! Double
+                        NotificationCenter.default.post(name: Notification.Name("LatLonRecieved"), object: nil)
                     }
                 
                 }
+        
+        
         print(self.stepProperty)
         self.StepCountLabel.text = "Number Of Steps: " + String(self.stepProperty)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(InitMap), name: Notification.Name("LatLonRecieved"), object: nil)
         
-        /*sendData(MyStringToSend: emailName)
+        //InitMap()
         
-        NotificationCenter.default.post(name: Notification.Name("EmailAdded"), object: nil)*/
-        
-        let camera = GMSCameraPosition.camera(withLatitude: userLat, longitude: userLon, zoom: 5.0)
+        /*let camera = GMSCameraPosition.camera(withLatitude: userLat, longitude: userLon, zoom: 5.0)
         
         self.mapView.camera = camera
         
-        var favCoordinatesArray: [CLLocationCoordinate2D]  = [CLLocationCoordinate2D(latitude: self.userLat, longitude: self.userLon), CLLocationCoordinate2D(latitude: 41.28, longitude: 36.3)]
+        var favCoordinatesArray: [CLLocationCoordinate2D]  = [CLLocationCoordinate2D(latitude: self.userLat, longitude: self.userLon), CLLocationCoordinate2D(latitude: userTargetLat, longitude: userTargetLon)]
         
         setMapMarkersRoute(vLoc: favCoordinatesArray[0], toLoc: favCoordinatesArray[1])
         
-        self.distance = getDistance(from: favCoordinatesArray[0], to: favCoordinatesArray[1])
+        self.distance = getDistance(from: favCoordinatesArray[0], to: favCoordinatesArray[1])*/
+        
+        
+        
+        
         
        // let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
         //self.view.addSubview(mapView)
@@ -98,6 +112,18 @@ class HomeViewController: UIViewController{
        
     }
     
+    @objc func InitMap(){
+        let camera = GMSCameraPosition.camera(withLatitude: userLat, longitude: userLon, zoom: 5.0)
+        
+        self.mapView.camera = camera
+        
+        var favCoordinatesArray: [CLLocationCoordinate2D]  = [CLLocationCoordinate2D(latitude: self.userLat, longitude: self.userLon), CLLocationCoordinate2D(latitude: userTargetLat, longitude: userTargetLon)]
+        
+        setMapMarkersRoute(vLoc: favCoordinatesArray[0], toLoc: favCoordinatesArray[1])
+        
+        self.distance = getDistance(from: favCoordinatesArray[0], to: favCoordinatesArray[1])
+    }
+    
     @objc func AddRoadMarkers(){
         var points = GetPointsAtADistance(meters: 1000)
         var i = 0
@@ -106,6 +132,7 @@ class HomeViewController: UIViewController{
             marker.map = mapView
             i += 1
         }
+        print(i)
     }
     
     func setMapMarkersRoute(vLoc: CLLocationCoordinate2D, toLoc: CLLocationCoordinate2D) {
@@ -228,5 +255,13 @@ class HomeViewController: UIViewController{
             return from.distance(from: to)
         }
     
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is SelectSportViewController {
+            let vc = segue.destination as? SelectSportViewController
+            vc?.emailName = emailName
+        }
+    }
+    
 }
